@@ -23,8 +23,7 @@
             android:paddingTop="@dimen/list_padding"
             android:paddingBottom="@dimen/list_padding"
             android:scrollbars="vertical"
-            app:items="@{viewmodel.photos}"
-            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager" />
+            app:items="@{viewmodel.photos}" />
     </LinearLayout>
 
 </layout>

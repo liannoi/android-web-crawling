@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import org.itstep.liannoi.jsoup.databinding.FragmentPhotosBinding
@@ -34,7 +35,7 @@ class PhotosFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         viewDataBinding.lifecycleOwner = viewLifecycleOwner
-        setupListAdapter()
+        setupList()
     }
 
     override fun onStop() {
@@ -51,9 +52,12 @@ class PhotosFragment : Fragment() {
     // Helpers
     ///////////////////////////////////////////////////////////////////////////
 
-    private fun setupListAdapter() {
+    private fun setupList() {
         listAdapter = PhotosAdapter(viewDataBinding.viewmodel ?: return)
         viewDataBinding.photosList.adapter = listAdapter
+
+        viewDataBinding.photosList.layoutManager =
+            StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
     }
 
     ///////////////////////////////////////////////////////////////////////////

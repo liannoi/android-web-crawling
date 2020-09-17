@@ -7,7 +7,6 @@ import dagger.hilt.android.components.ApplicationComponent
 import org.itstep.liannoi.jsoup.application.common.sources.RemoteDataSource
 import org.itstep.liannoi.jsoup.application.storage.photos.models.Photo
 import org.itstep.liannoi.jsoup.application.storage.photos.sources.UnsplashRemoteDataSource
-import org.itstep.liannoi.jsoup.application.storage.photos.sources.WikipediaRemoteDataSource
 import javax.inject.Qualifier
 import javax.inject.Singleton
 
