@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.itstep.liannoi.jsoup">
 
+    <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
+
     <application
         android:name=".application.core.CrawlingApplication"
         android:allowBackup="false"

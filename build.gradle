@@ -47,6 +47,7 @@ ext {
     // App dependencies
     constraintVersion = "2.0.1"
     jsoupVersion = "1.13.1"
+    picassoVersion = "2.71828"
 
     lifecycleVersion = "2.2.0"
     navigationVersion = "2.3.0"
