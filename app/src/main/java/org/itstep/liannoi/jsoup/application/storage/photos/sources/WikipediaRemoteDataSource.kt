@@ -12,6 +12,6 @@ class WikipediaRemoteDataSource :
     override fun getAll(): Single<List<Photo>> =
         Observable.fromCallable { connectedSource.select(".central-featured-logo").eachAttr("src") }
             .flatMapIterable { it }
-            .map { Photo(0, "${ApplicationDefaults.URL_WIKIPEDIA}$it") }
+            .map { Photo("${ApplicationDefaults.URL_WIKIPEDIA}$it", 0) }
             .toList()
 }

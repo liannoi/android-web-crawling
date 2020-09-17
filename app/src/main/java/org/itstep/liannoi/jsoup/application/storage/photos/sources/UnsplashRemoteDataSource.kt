@@ -12,6 +12,6 @@ class UnsplashRemoteDataSource :
     override fun getAll(): Single<List<Photo>> =
         Observable.fromCallable { connectedSource.getElementsByTag("img").eachAttr("src") }
             .flatMapIterable { it }
-            .map { Photo(0, it) }
+            .map { Photo(it, 0) }
             .toList()
 }
